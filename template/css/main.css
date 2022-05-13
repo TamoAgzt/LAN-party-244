@@ -64,7 +64,7 @@ p {
     all: unset;
     width: 140px;
     height: 100px;
-    background-color: rgba(100, 100, 100, 0.5);
+    background-color: rgba(255, 255, 255, 0.6);
     border-radius: 6px;
     margin: 20px;
     border: 1px solid rgb(255, 0, 149);
@@ -75,6 +75,7 @@ p {
 }
 
 .buttons .button-one{
+    background-color: rgba(0,0,0,0);
     color:blueviolet;
     width: 300px;
     height: 40px;
