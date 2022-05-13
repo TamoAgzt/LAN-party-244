@@ -1,11 +1,4 @@
-:host,
-:root{
 
-}
-
-body{
-
-}
 
 h1,
 h2,
@@ -16,25 +9,30 @@ h6{
     margin:0px;
 }
 
-nav{
-
+.nav{
+    display: flex;
+    align-content: center;
 }
 
 .content{
-
+    background-color: brown;
 }
 
 .timer-container{
-
+    display: flex;
+    left: 0;
+    right: 0;
+    background-color: blue;
 }
 
 .timer-box{
-
+    max-width: 75px;
+    max-height: 75px;
+    background-color: rgba(100, 100, 100, 0.5);
+    border-radius: 6px;
 }
 
-.content .info-button{
-
-}
-.content .info-button{
-
+.content .left-button,
+.content .right-button{
+    background-color: blueviolet;
 }
