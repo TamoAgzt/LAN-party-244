@@ -81,6 +81,7 @@ p {
     height: 40px;
     margin: 10px;
     border-radius: 25px;
+    border: 1px solid rgb(255, 0, 149);
 }
 
 .buttons .button-two {
@@ -90,6 +91,7 @@ p {
     height: 40px;
     margin: 10px;
     border-radius: 25px;
+    border: 1px solid rgb(255, 0, 149);
 }
 
 .buttons .button-one:hover,
