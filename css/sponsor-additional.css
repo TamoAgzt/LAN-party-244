@@ -1,0 +1,97 @@
+
+/************************************
+//Jack Kartoush & Tamas Nemes:   Front end sponsor page.
+//
+//
+//
+//
+//
+//Version: v0.1
+************************************/
+
+
+/******************************************SPONSOR CONTENT***********************************************/
+
+.sponsor-content {
+    position: relative;
+    margin: 120px auto 32px;
+    padding: 0 12px;
+    max-width: 1200px;
+  }
+  
+  .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  .slide {
+    display: none;
+    text-align:center;
+  }
+  
+  .sponser-foto{
+    height: 360px;
+    width: 740px;
+    border-radius: 10px;
+  }
+  
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 12px;
+    color: #FE53BB;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.6s ease;
+    user-select: none;
+    animation: flicker 1.5s infinite alternate;
+  }
+  
+  .next {
+    right: 0;
+  }
+  
+  .prev:hover{
+    transform: translateX(-10px);
+  }
+  
+  .next:hover {
+    transform: translateX(10px);
+  }
+  
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #FE53BB;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    opacity: 0.6;
+  }
+  
+  .active,
+  .dot:hover {
+    opacity: 1;
+  }
+  
+  .tierLabel {
+    height: 35px;
+    width: 20px;
+    top: 0px;
+    right: 10px;
+    display: inline;
+    background-color: blue;
+    margin: 10px;
+    z-index: 100;
+  }
+  
+  .tierLabel:active {
+    background-color: blueviolet;
+  }
