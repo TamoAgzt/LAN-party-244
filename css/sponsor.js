@@ -59,20 +59,22 @@ pageOverlay.addEventListener ('click',() => {
      })
 })
 
-closePopUpsButtons.forEach(button =>{
-    button.addEventListener('click',() =>{
-       // popup screen 1
-        const popUp = button.closest('.popup-info');
-        closePupUp(popupInfo);
-    })
-     // popup screen 2
-        const popUp2 = button.closest('.popup-info2');
-       closePupUp(popupInfo2);
-
-     // popup screen 3
-        const popUp3 = button.closest('.popup-info3');
+closePopUpsButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // popup screen 1
+      const popUp = button.closest('.popup-info');
+      closePupUp(popupInfo);
+  
+      // popup screen 2
+      const popUp2 = button.closest('.popup-info2');
+      closePupUp(popupInfo2);
+  
+      // popup screen 3
+      const popUp3 = button.closest('.popup-info3');
       closePupUp(popupInfo3);
-})
+    })
+  })
+  
 
 function openPupUp(popupInfo){
     if( popupInfo == null)  return
