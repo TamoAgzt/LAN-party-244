@@ -565,7 +565,11 @@ h1 {
 
 .swiper {
   width: 100%;
-  height: 100%;
+  height: 65%;
+}
+
+.swiper:hover{
+  cursor: e-resize;
 }
 
 .swiper-slide {
@@ -595,6 +599,19 @@ h1 {
 }
 
 
-.swiper-pagination{
+/* .swiper-pagination{
   margin-bottom: 8%;
+} */
+
+
+
+
+
+.info{
+  color: #fff;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    margin: 0;
+	padding: 0;
 }
