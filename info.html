@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<!-- 
+//************************************
+//Team Rocket: Frond end.
+//
+//
+//
+//
+//
+//Version: v1.0
+//*************************************
+-->
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISTA LANparty</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+    <img class="wallpaper" src="images/LAN-Event.jpg">
+    <!--<img class="sign" src="images/sign.png">-->
+
+    <div class="Organisatie_Titel">
+        <h1>Who's behind the event?</h1>
+    </div>
+
+    <nav class="stickynav">
+        <ul class="menu">
+            <li><a href="index.html#">Home</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="index.html#which_games">Which Games</a></li>
+            <li><a href="#">Information</a></li>
+            <li><a href="https://discord.gg/q3hEvcKSf9">Discord</a></li>
+        </ul>
+    </nav>
+
+
+    <!--------- SCROLLDOWN INDICATOR ---------->
+
+    <div class="scrolldown">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="Organisatie_Container">
+
+        <div class="Organisatie_Foto">
+            <img src="./images/IvoHeuts.jpeg" alt="Ivooooo" width="350px">
+        </div>
+
+        <div class="Organisatie_Info">
+            <h1>Ivo Heuts - Docent ICT Vista College </h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non bibendum arcu. Praesent id sem ut lectus
+                convallis aliquam at at leo. Vestibulum lacus tortor, iaculis volutpat orci et, pulvinar vehicula justo.
+                Pellentesque vestibulum libero nec lorem finibus hendrerit. Fusce in nunc libero. Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit. Suspendisse fringilla blandit luctus. Vivamus et fermentum neque.
+                Donec congue ante quis augue euismod mattis in at nunc. Maecenas tincidunt felis in ligula consequat, at
+                lacinia purus bibendum. Praesent posuere massa eget arcu dignissim pharetra. Ut aliquet, nibh sit amet
+                sagittis malesuada, nisi massa placerat neque, eget faucibus nunc velit eu augue.</p>
+        </div>
+
+    </div>
+
+    <br>
+
+    <div class="Organisatie-slide-content">
+
+        <div class="Organisatie-slideshow-container">
+            <a class="Organisatie-prev" onclick="changeSlides(-1)">&#10094;</a>
+            <div class="Organisatie-slide">
+                <img src="https://thenerdstash.com/wp-content/uploads/2017/08/duct2.jpg" class="Organisatie-foto">
+            </div>
+
+            <div class="Organisatie-slide">
+                <img src="https://www.xfire.com/wp-content/uploads/2021/06/Lan-Party-scaled.jpg" class="Organisatie-foto">
+            </div>
+
+            <div class="Organisatie-slide">
+                <img src="https://pbs.twimg.com/media/DxcvVTuX0AApiL2.jpg" class="Organisatie-foto">
+            </div>
+
+            <div class="Organisatie-slide">
+                <img src="https://preview.redd.it/zdegl0ubsi291.jpg?width=640&crop=smart&auto=webp&s=f4a8613986ff3a5b4fa52146dd614041af772b46" class="Organisatie-foto">
+            </div>
+
+
+            <a class="Organisatie-next" onclick="changeSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="Organisatie-dot" onclick="currentSlide(1)"></span>
+            <span class="Organisatie-dot" onclick="currentSlide(2)"></span>
+            <span class="Organisatie-dot" onclick="currentSlide(3)"></span>
+            <span class="Organisatie-dot" onclick="currentSlide(4)"></span>
+        </div>
+    </div>
+    <br>
+
+    <div class="Organisatie_Container">
+
+        <div class="Organisatie_Info">
+            <h1>TEST - Docent ICT Vista College </h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non bibendum arcu. Praesent id sem ut lectus
+                convallis aliquam at at leo. Vestibulum lacus tortor, iaculis volutpat orci et, pulvinar vehicula justo.
+                Pellentesque vestibulum libero nec lorem finibus hendrerit. Fusce in nunc libero. Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit. Suspendisse fringilla blandit luctus. Vivamus et fermentum neque.
+                Donec congue ante quis augue euismod mattis in at nunc. Maecenas tincidunt felis in ligula consequat, at
+                lacinia purus bibendum. Praesent posuere massa eget arcu dignissim pharetra. Ut aliquet, nibh sit amet
+                sagittis malesuada, nisi massa placerat neque, eget faucibus nunc velit eu augue.</p>
+        </div>
+
+        <div class="Organisatie_Foto">
+            <img src="./images/IvoHeuts.jpeg" alt="Ivooooo" width="350px">
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+        </script>
+</body>
+<script>
+    let slideIndex = 1; //js
+    showSlides(slideIndex);
+    
+    function changeSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("slide");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    } 
+    </script>
+
+</html>
