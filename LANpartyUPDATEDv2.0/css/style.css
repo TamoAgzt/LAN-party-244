@@ -1,0 +1,657 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+
+
+/************************************
+//Ricky Dupuits: Frond end.
+//
+//
+//
+//
+//
+//Version: v0.1
+************************************/
+
+*{
+  scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--bg-color: #000;
+	--second-bg-color: #191919;
+	--txt-color: #fff;
+    --second-txt-color: #000;
+	--accent-color: #603dd4;
+	--second-accent-color: #e91e63;
+}
+
+::-webkit-scrollbar{
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: var(--accent-color);
+  border-radius: 16px;
+  visibility: hidden;
+}
+
+.wallpaper{
+    position: relative;
+    width: 100%;
+    height: 780px;
+	opacity: 0.3;
+}
+
+body{
+	background-color: var(--second-bg-color);
+	font-family: 'Raleway', sans-serf;
+}
+
+a{
+	text-decoration: none;
+    position:relative;
+}
+
+ul{
+	list-style: none;
+    
+}
+
+.stickynav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: fixed;
+	top: 2%;
+	width: 100%;
+	z-index: 1;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+nav ul{
+	display: flex;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+nav ul li a{
+	color: #fff;
+    text-shadow:
+        0 0 4px #fff,
+        0 0 11px rgb(101, 101, 101),
+        0 0 19px rgb(101, 101, 101),
+        0 0 3px #FE53BB,
+        0 0 4px #FE53BB,
+        0 0 6px #FE53BB,
+        0 0 8px #FE53BB,
+        0 0 10px #FE53BB;
+	margin: 3px;
+	padding: 0 22px;
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing: 1px;
+	border-radius: 3px;
+	transition-duration: 0.5s;
+	transition: 0.3s;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+
+nav ul li a:hover{
+	color: #fff;
+    text-shadow:
+        0 0 4px #fff,
+        0 0 11px rgb(101, 101, 101),
+        0 0 19px rgb(101, 101, 101),
+        0 0 3px #B76CFD,
+        0 0 4px #B76CFD,
+        0 0 6px #B76CFD,
+        0 0 8px #B76CFD,
+        0 0 10px #B76CFD;
+	transition-duration: 0.5s;
+}
+
+
+
+
+/*****************************************************************************************SCROLLDOWN***********************************************************************************/
+
+.scrolldown{
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	width: 40px;
+	height: 40px;
+	transform: translateY(-80px) translateX(-50%) rotate(45deg);
+}
+
+.scrolldown span{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-bottom: 2px solid var(--txt-color);
+	border-right: 2px solid var(--txt-color);
+	animation: animate 1.5s linear infinite;
+	opacity: 0;
+}
+
+.scrolldown span:nth-child(1){
+	transform: translate(-15px,-15px);
+	animation-delay: -0.4s;
+}	
+
+.scrolldown span:nth-child(2){
+	transform: translate(0,0);
+	animation-delay: -0.2s;
+}
+
+.scrolldown span:nth-child(3){
+	transform: translate(15px,15px);
+	animation-delay: 0s;
+}
+
+@keyframes animate{
+	0%{
+		top: -5px;
+		left: -5px;
+		opacity: 0;
+	}
+	25%{
+		top: 0px;
+		left: 0px;
+		opacity: 1;
+	}
+	100%{ 
+		top: 15px;
+		left: 15px;
+		opacity: 0;
+	}
+}
+
+
+
+/* .neonText {
+    color: #fff;
+    text-shadow:
+        0 0 4px #fff,
+        0 0 11px rgb(101, 101, 101),
+        0 0 19px rgb(101, 101, 101),
+        0 0 3px #0fa,
+        0 0 4px #0fa,
+        0 0 6px #0fa,
+        0 0 8px #0fa,
+        0 0 10px #0fa;
+  } */
+
+
+.neonText {
+    animation: flicker 1.5s infinite alternate;
+    color: #fff;
+    position: absolute;
+    top: -2%;
+    left: 22%;
+    margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+    margin-top: 10%;
+  }
+  
+  h1 {
+    font-size: 4.2rem;    
+  }
+  
+  @keyframes flicker {
+      
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px rgb(101, 101, 101),
+        0 0 19px rgb(101, 101, 101),
+        0 0 3px #08F7FE,
+        0 0 4px #08F7FE,
+        0 0 6px #08F7FE,
+        0 0 8px #08F7FE,
+        0 0 10px #08F7FE;
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }
+
+
+  #clockdiv{
+	font-family: 'Arial', sans-serf;
+    font-size: 3em;
+    font-weight: 100;
+    color: white;
+    position: absolute;
+    top: 50%;
+  margin: 0;
+padding: 0;
+display: flex;
+justify-content: center;
+    left: 27%;
+    padding: 20px;
+    width: 700px;
+    color: white;
+  }
+  
+  #clockdiv > div{
+    display: inline-block;
+    min-width: 90px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 15px;
+  }
+  
+  #clockdiv div > span{
+    color: #fff;
+    text-shadow:
+        0 0 4px rgb(246, 122, 122),
+        0 0 11px rgb(101, 101, 101),
+        0 0 19px rgb(101, 101, 101),
+        0 0 3px #FF3131,
+        0 0 4px #FF3131,
+        0 0 6px #FF3131,
+        0 0 8px #FF3131,
+        0 0 10px #FF3131;
+    display: block;
+    margin-top: 15px;
+    font-size: 1em;
+	text-align: center;
+    font-weight: 400;
+  }
+  
+  .smalltext{
+	font-family: 'Raleway', sans-serf;
+    padding-top: 5px;
+    font-size: 16px;
+	text-align: center;
+  }
+
+
+/*****************************************************************************************SCROLLDOWN***********************************************************************************/
+
+
+.events {
+  animation: flicker 1.5s infinite alternate;
+  color: #fff;
+  margin-bottom: -8%;
+padding: 0;
+display: flex;
+justify-content: center;
+  margin-top: 10%;
+}
+
+.events h1 {
+  font-size: 8rem;    
+}
+
+.mooi h5 {
+  margin-bottom: -7%;
+  visibility: hidden;
+}
+
+h1 {
+  font-size: 4.2rem;    
+}
+
+@keyframes flicker {
+    
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px rgb(101, 101, 101),
+      0 0 19px rgb(101, 101, 101),
+      0 0 3px #08F7FE,
+      0 0 4px #08F7FE,
+      0 0 6px #08F7FE,
+      0 0 8px #08F7FE,
+      0 0 10px #08F7FE;
+  
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
+}
+
+
+
+
+.welcome-btn a{
+	display: inline-block;
+	border-radius: 6px;
+	border: 1px solid var(--txt-color);
+	padding: 10px 30px;
+	text-decoration: none;
+	transition-duration: 0.5s;
+
+  color: #fff;
+    text-shadow:
+        0 0 4px #fff,
+        0 0 11px rgb(101, 101, 101),
+        0 0 19px rgb(101, 101, 101),
+        0 0 3px #B76CFD,
+        0 0 4px #B76CFD,
+        0 0 6px #B76CFD,
+        0 0 8px #B76CFD,
+        0 0 10px #B76CFD;
+	transition-duration: 0.5s;
+}
+
+
+
+.welcome-btn .cv{
+	border: 0px solid transparent;
+  box-shadow: 
+  0 0 4px #fff,
+  0 0 11px rgb(101, 101, 101),
+  0 0 19px rgb(101, 101, 101),
+  0 0 3px #B76CFD,
+  0 0 4px #B76CFD,
+  0 0 6px #B76CFD,
+  0 0 8px #B76CFD,
+  0 0 10px #B76CFD;
+	transition-duration: 0.5s;
+  box-shadow: inset
+  0 0 3px #B76CFD,
+  0 0 4px #B76CFD,
+  0 0 6px #B76CFD,
+  0 0 8px #B76CFD,
+  0 0 10px #B76CFD;
+  
+	font-weight: 500;
+}
+
+.welcome-btn .cv:hover{
+	transition-duration: 0.5s;
+}
+
+
+
+
+
+
+
+.container{
+  height: 100vh;
+  width: 100vw;
+  max-height: 880px;
+  max-width: 1280px;
+  min-height: 600px;
+  min-width: 1000px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.border{
+  height: 369px;
+  width: 290px;
+  background: transparent;
+  border-radius: 10px;
+  transition: border 1s;
+  position: relative;
+}
+
+.border:hover{
+  border: 1px solid #fff;
+}
+
+.border h2{
+  color: #fff;
+  opacity: 0;
+  margin-top: 20%;
+  margin-left: 20px;
+  transition: opacity 1s;
+}
+
+.mySwiper1{
+  visibility: hidden;
+}
+
+.card{
+  height: 379px;
+  width: 300px;
+  background: #808080;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 
+  0 0 4px #fff,
+  0 0 11px rgb(101, 101, 101),
+  0 0 19px rgb(101, 101, 101),
+  0 0 3px #B76CFD,
+  0 0 4px #B76CFD,
+  0 0 6px #B76CFD,
+  0 0 8px #B76CFD,
+  0 0 10px #B76CFD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/******************************************FORTNITE****************************************************/
+
+.card1{
+  background: url("/images/fort.jpg")
+  center center no-repeat;
+  background-size: 100%;
+  transition: 2s;
+}
+
+.card1:hover{
+  background: url("/images/fort.jpg")
+  top left no-repeat;
+  opacity: 0.8;
+  background-size: 400px;
+}
+
+.card1:hover h2, .card2:hover h2, .card3:hover h2, .card4:hover h2, .card5:hover h2{
+  opacity: 1;
+  color: #fff;
+    text-shadow:
+        0 0 4px #fff,
+        0 0 11px rgb(101, 101, 101),
+        0 0 19px rgb(101, 101, 101),
+        0 0 3px #4D4DFF,
+        0 0 4px #4D4DFF,
+        0 0 6px #4D4DFF,
+        0 0 8px #4D4DFF,
+        0 0 10px #4D4DFF;
+}
+
+
+/******************************************ROCKET LEAGUE***********************************************/
+
+.card2{
+  background: url("/images/rocket.jpg")
+  center center no-repeat;
+  background-size: 300px;
+  transition: 2s;
+}
+
+.card2:hover{
+  background: url("/images/rocket.jpg")
+  top left no-repeat;
+  opacity: 0.8;
+  background-size: 400px;
+}
+
+
+/******************************************VALORANT***********************************************/
+
+.card3{
+  background: url("/images/valorant.jpg")
+  center center no-repeat;
+  background-size: 300px;
+  transition: 2s;
+}
+
+.card3:hover{
+  background: url("/images/valorant.jpg")
+  top left no-repeat;
+  opacity: 0.8;
+  background-size: 400px;
+}
+
+/******************************************CSGO***********************************************/
+
+.card4{
+  background: url("/images/csgo.jpg")
+  center center no-repeat;
+  background-size: 300px;
+  transition: 2s;
+}
+
+.card4:hover{
+  background: url("/images/csgo.jpg")
+  top left no-repeat;
+  opacity: 0.8;
+  background-size: 400px;
+}
+
+/******************************************R6***********************************************/
+
+.card5{
+  background: url("/images/r6.jpg")
+  center center no-repeat;
+  background-size: 300px;
+  transition: 2s;
+}
+
+.card5:hover{
+  background: url("/images/r6.jpg")
+  top left no-repeat;
+  opacity: 0.8;
+  background-size: 400px;
+}
+
+/******************************************CARD CONTENT***********************************************/
+
+
+.h4{
+  position: absolute;
+  fill: #fff;
+  color: #fff;
+  height: 130px;
+  top: 226px;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+
+
+
+.swiper {
+  width: 100%;
+  height: 65%;
+}
+
+.swiper:hover{
+  cursor: e-resize;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  margin-top: auto;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* .swiper-pagination{
+  margin-bottom: 8%;
+} */
+
+
+
+
+
+.info{
+  color: #fff;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    margin: 0;
+	padding: 0;
+}
+
+
+
+/*****************RESPONSIVE****************/
+
+@media screen and
+(max-width: 600px){
+  .neonText h1{
+    font-size: 3.0rem;
+    margin-top: 25%;
+    margin-left: -10%;
+  }
+  #clockdiv{
+    font-size: 1.8rem;
+    margin-left: -50%;
+  }
+  #clockdiv > div{
+    min-width: 60px;
+  }
+  .events h1{
+    font-size: 1.8rem;
+    margin-left: -50%;
+  }
+  .mySwiper{
+    visibility: hidden;
+  }
+  .mySwiper1{
+    visibility: visible;
+    margin-top: -100%;
+  }
+  
+}
