@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<!-- 
+//************************************
+//Team Rocket: Frond end.
+//
+//
+//
+//
+//
+//Version: v1.0
+//*************************************
+-->
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISTA LANparty</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/responsive_navbar.css"/>
+</head>
+
+<body>
+    <img class="wallpaper" src="images/LAN-Event.jpg">
+    <!--<img class="sign" src="images/sign.png">-->
+
+    <div class="Organisatie_Titel">
+        <h1>Who's behind the event?</h1>
+    </div>
+
+    <nav class="navbar stickynav">
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox" class="hond">
+                <span class="line line--top"></span>
+                <span class="line line--middle"></span>
+                <span class="line line--bottom"></span>
+        </label>
+        <div class="menu">
+            <ul class="list">
+                <li><a class="nav_link" href="#">Home</a></li>
+                <li><a class="nav_link" href="#">Events</a></li>
+                <li><a class="nav_link" href="#which_games">Which Games</a></li>
+                <li><a class="nav_link active" href="info.html#">Information</a></li>
+                <li><a class="nav_link" href="sponsor.html#">Sponsor</a></li>
+                <li><a class="nav_link" href="https://discord.gg/q3hEvcKSf9">Discord</a></li>
+            </ul>
+        </div>
+    </nav>
+    <script type="text/javascript" src="./js/active-page.js"></script>
+
+
+    <!--------- SCROLLDOWN INDICATOR ---------->
+
+    <div class="scrolldown">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="Organisatie_Container">
+
+        <div class="Organisatie_Foto">
+            <img src="data:image/jpeg;base64,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" alt="Ivooooo" width="350px">
+        </div>
+
+        <div class="Organisatie_Info">
+            <h1>Ivo Heuts - Docent ICT Vista College </h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non bibendum arcu. Praesent id sem ut lectus
+                convallis aliquam at at leo. Vestibulum lacus tortor, iaculis volutpat orci et, pulvinar vehicula justo.
+                Pellentesque vestibulum libero nec lorem finibus hendrerit. Fusce in nunc libero. Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit. Suspendisse fringilla blandit luctus. Vivamus et fermentum neque.
+                Donec congue ante quis augue euismod mattis in at nunc. Maecenas tincidunt felis in ligula consequat, at
+                lacinia purus bibendum. Praesent posuere massa eget arcu dignissim pharetra. Ut aliquet, nibh sit amet
+                sagittis malesuada, nisi massa placerat neque, eget faucibus nunc velit eu augue.</p>
+        </div>
+
+    </div>
+
+    <br>
+
+    <div class="Organisatie-slide-content">
+
+        <div class="Organisatie-slideshow-container">
+            <a class="Organisatie-prev" onclick="changeSlides(-1)">&#10094;</a>
+            <div class="Organisatie-slide">
+                <img src="https://thenerdstash.com/wp-content/uploads/2017/08/duct2.jpg" class="Organisatie-foto">
+            </div>
+
+            <div class="Organisatie-slide">
+                <img src="https://www.xfire.com/wp-content/uploads/2021/06/Lan-Party-scaled.jpg" class="Organisatie-foto">
+            </div>
+
+            <div class="Organisatie-slide">
+                <img src="https://pbs.twimg.com/media/DxcvVTuX0AApiL2.jpg" class="Organisatie-foto">
+            </div>
+
+            <div class="Organisatie-slide">
+                <img src="https://preview.redd.it/zdegl0ubsi291.jpg?width=640&crop=smart&auto=webp&s=f4a8613986ff3a5b4fa52146dd614041af772b46" class="Organisatie-foto">
+            </div>
+
+
+            <a class="Organisatie-next" onclick="changeSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="Organisatie-dot" onclick="currentSlide(1)"></span>
+            <span class="Organisatie-dot" onclick="currentSlide(2)"></span>
+            <span class="Organisatie-dot" onclick="currentSlide(3)"></span>
+            <span class="Organisatie-dot" onclick="currentSlide(4)"></span>
+        </div>
+    </div>
+    <br>
+
+    <div class="Organisatie_Container">
+
+        <div class="Organisatie_Info">
+            <h1>TEST - Docent ICT Vista College </h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non bibendum arcu. Praesent id sem ut lectus
+                convallis aliquam at at leo. Vestibulum lacus tortor, iaculis volutpat orci et, pulvinar vehicula justo.
+                Pellentesque vestibulum libero nec lorem finibus hendrerit. Fusce in nunc libero. Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit. Suspendisse fringilla blandit luctus. Vivamus et fermentum neque.
+                Donec congue ante quis augue euismod mattis in at nunc. Maecenas tincidunt felis in ligula consequat, at
+                lacinia purus bibendum. Praesent posuere massa eget arcu dignissim pharetra. Ut aliquet, nibh sit amet
+                sagittis malesuada, nisi massa placerat neque, eget faucibus nunc velit eu augue.</p>
+        </div>
+
+        <div class="Organisatie_Foto">
+            <img src="data:image/jpeg;base64,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" alt="Ivooooo" width="350px">
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+        </script>
+</body>
+<script>
+    let slideIndex = 1; //js
+    showSlides(slideIndex);
+    
+    function changeSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("Organisatie-slide");
+      let dots = document.getElementsByClassName("Organisatie-dot");
+      if (n > slides.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    } 
+    </script>
+
+</html>
