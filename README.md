@@ -1,3 +1,6 @@
-![banner image](template/public/img/LAN_party_244.png)
+# LAN-party-244
+De repository voor de LAN Party projecten. Ieder groep krijgt z'n eigen branch.
 
-# LAN party 244
+
+# Revenge-of-the-Coders
+Sponsor pagina front end
