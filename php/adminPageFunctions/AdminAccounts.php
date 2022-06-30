@@ -1,4 +1,8 @@
 <?php
+session_start();
+if(!$_SESSION["logedin"]){
+    header("Location: ../../adminLogin.php");
+}
 
 include("../includes/security.php");
 include("../includes/database.php");
@@ -15,14 +19,17 @@ echo('
     <html>
         <head>
             <title>AdminPage</title>
+            <link rel="stylesheet" href="../../styleAdmin.css">
         </head>
         <body>
+
             <ul>
-                <li><a href="../mainAdminPage.php">adminPage</a></li>
-                <li><a href="./inschrijving.php">inschrijvingen</a></li>
-                <li><a href="./sponseradder.php">sponseradder</a></li>
-                <li><a href="#">admin accounts</a></li>
+                <li><a href="../mainAdminPage.php"><b>adminPage</b></a></li>
+                <li><a href="./sponseradder.php"><b>sponseradder</b></a></li>
+                <li><a href="#"><b>admin accounts</b></a></li>
             </ul>
+            <div class="container">
+            <h1>Add Admin Accounts</h1>
             <form method="post">
                 <input type="hidden" name="add" value="add"/>
                 <input type="hidden" name="remove" value="add"/>
@@ -60,6 +67,7 @@ foreach($connection as $rows){
     echo("</tr>");
 }
 echo('
+    </div>
     </tabel>
    </body>
 </html>

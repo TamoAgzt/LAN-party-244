@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 06 jun 2022 om 15:02
+-- Gegenereerd op: 30 jun 2022 om 20:26
 -- Serverversie: 10.4.24-MariaDB
 -- PHP-versie: 8.1.6
 
@@ -19,6 +19,7 @@ SET time_zone = "+00:00";
 
 --
 -- Database: `testen`
+--
 
 -- --------------------------------------------------------
 
@@ -38,7 +39,8 @@ CREATE TABLE `admin` (
 
 INSERT INTO `admin` (`admin_ID`, `nameAdmin`, `Password`) VALUES
 (7, 'Bram', '$2y$10$y0k7Cvay6k3vcdDXhiiqKeIXRG67T3ym5S1ROHSPUpR7CrlIDO3p2'),
-(8, 'root', '$2y$10$IhICarpzZvsACCrwfOmPf.kcDU1MYNZ/WZRaoylrAmc567tDoSDBa');
+(8, 'root', '$2y$10$IhICarpzZvsACCrwfOmPf.kcDU1MYNZ/WZRaoylrAmc567tDoSDBa'),
+(10, 'test', '$2y$10$YQVkSxI6oX2E979uuECJuO1BTdEod3JREGxgvpsqWh1g7p5RWNOMK');
 
 -- --------------------------------------------------------
 
@@ -52,15 +54,9 @@ CREATE TABLE `sponsers` (
   `Sponser_Adres` varchar(20) NOT NULL,
   `Sponser_Locatie` varchar(20) NOT NULL,
   `Sponser_beschrijving` varchar(256) NOT NULL,
-  `Sponser_tier` text NOT NULL
+  `Sponser_tier` text NOT NULL,
+  `SponserFoto` mediumblob DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Gegevens worden geëxporteerd voor tabel `sponsers`
---
-
-INSERT INTO `sponsers` (`sponser_ID`, `Sponser_Naam`, `Sponser_Adres`, `Sponser_Locatie`, `Sponser_beschrijving`, `Sponser_tier`) VALUES
-(12, 'kringloop rd4', 'heerlenstraat 2', 'heerlen', 'voor all uw tweedehands producten', 'bronze');
 
 -- --------------------------------------------------------
 
@@ -112,13 +108,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT voor een tabel `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `admin_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `admin_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT voor een tabel `sponsers`
 --
 ALTER TABLE `sponsers`
-  MODIFY `sponser_ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `sponser_ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT voor een tabel `users`

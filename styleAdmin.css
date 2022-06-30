@@ -1,0 +1,52 @@
+body{
+    background-color: #121212;
+    color: white;
+    font-family: "Calibri";
+}
+
+.Login{
+    background-color: gray;
+    width: 220px;
+    height: 220px;
+}
+.button{
+    border: none;
+    border-radius: 20px; 
+    justify-content: center;
+}
+
+.container{
+    margin-left: 50px;
+}
+
+.label{
+    justify-content: center;
+}
+
+ul {
+    border-radius: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: lightseagreen;
+  }
+  
+  li {
+    margin-left: 50px;
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 30px;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: lightblue;
+  }
